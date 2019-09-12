@@ -1,3 +1,3 @@
-document.body.onclick = function(){
-    alert("1")
+function yellow(obj){
+    obj.style.backgroundColor="yellow";
 }
