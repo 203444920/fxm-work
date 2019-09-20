@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="d">
+    <script>
+     var d = document.getElementById('d');
+     var nw = confirm('女王点确定');
+     consloe.log(nw);
+     d.oninput = function(){
+         alert(d.value);
+     }
+    </script>
+</body>
+</html>
