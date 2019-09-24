@@ -19,13 +19,14 @@
 3.用类名获取getElementsByClassName()
 4.用选择器获取querySelector()和querySelectorAll()
 
-二：用标签名获取
+二：
+var div = document.getElementsByTagName('div');
+   console.log(div[3]);
 
 三 querySelector() 前者只能找到元素列表的第一个元素,querySelectorAll()可以全部找到
 
 四 
-        div.innerHTML = <a href="#">去百度</a>
+        div.innerHTML = '<a href="#">去百度</a>'
          
-五var div = document.getElementById('mydiv');
-       btn =onclick function(){
-      div.className('blue');
+五var div = document.getElementsByTagName('div');
+   div.className = 'box blue'
