@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			ul{
+				list-style: none;
+				display: inline-block;
+			}
+			li{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				display: inline-block;
+				border: 1px solid #fff;
+			}
+			.li1{
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				display: inline-block;
+				background-color:darkturquoise;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<ul>
+			<li class="li1"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<script type="text/javascript">
+			$(function(){
+				var colors= ["red", "blue", "purple", "green", "orange", "pink","yellow"];
+				for(var i=0;i<=colors.length;i++){
+					$("li:nth-child("+(i+2)+")").css("backgroundColor",colors[i]);
+				}
+				$(".li1").siblings().hide();
+				$(".li1").click(function(){
+					$(this).siblings().toggle(200);
+				})
+				$("ul li:gt(0)").click(function(){
+					$("body").css("backgroundColor",$(this).css("backgroundColor"));
+				})
+			})
+		</script>
+	</body>
+</html>
